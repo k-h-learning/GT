@@ -22,7 +22,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 100;
     &__ttl {
       color: $White;
@@ -37,8 +39,12 @@
   margin: 2% auto;
   text-align: center;
   &__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     &__item {
       display: inline-block;
       border: 1px solid $Blue_Dark;
@@ -46,10 +52,14 @@
       width: 40px;
       height: 40px;
       margin: 4% 2% auto 2%;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
       transition: all 0.3s;
       a {
         color: $White;
         font-size: 1.5rem;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
       }
       &:hover {
@@ -72,7 +82,8 @@
 @include mq(tab) {
   header.headerScroll {
     background: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     .drawer {
       border-top: solid 5px $White;
       &::before,
@@ -94,7 +105,8 @@
 
   header.headerScrollTab {
     background: $White;
-    box-shadow: 4px 4px 4px 0 $Gray_Light;
+    -webkit-box-shadow: 4px 4px 4px 0 $Gray_Light;
+            box-shadow: 4px 4px 4px 0 $Gray_Light;
     .drawer {
       border-top: solid 5px $Blue_Dark;
       &::before,

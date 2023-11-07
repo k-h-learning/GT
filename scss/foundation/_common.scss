@@ -45,7 +45,9 @@ li {
 .__inner {
   width: 90%;
   margin: 0 auto;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 br.__sp {
@@ -98,7 +100,9 @@ br.__sp {
       border-radius: 15%;
       left: 0;
       top: 50%;
-      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
       @include mq(tab) {
         width: 20px;
       }
@@ -119,17 +123,31 @@ br.__sp {
     span {
       &::after,
       &::before {
-        animation: spin 0.5s linear;
+        -webkit-animation: spin 0.5s linear;
+                animation: spin 0.5s linear;
       }
     }
 }
 
-@keyframes spin {
+@-webkit-keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(1080deg);
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
   }
 }
 
@@ -173,9 +191,11 @@ br.__sp {
   background-color: $Blue_Marin;
   cursor:pointer;
   position:relative;
-  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
   overflow:hidden;
-  box-shadow: 2px 2px 6px 0 $Gray;
+  -webkit-box-shadow: 2px 2px 6px 0 $Gray;
+          box-shadow: 2px 2px 6px 0 $Gray;
   @include mq(tab) {
     width: 216px;
     height: 54px;
@@ -186,13 +206,16 @@ br.__sp {
   }
   a {
     color:$White;
+    -webkit-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
     transition:all 0.3s ease;
     z-index:2;
     position:relative;
     line-height: 60px;
     display: inline-block;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-weight: bolder;
     text-align: center;
     padding-right: 2rem;
@@ -209,9 +232,13 @@ br.__sp {
       height: 0.5rem;
       border-top: 3px solid $White;
       border-right: 3px solid $White;
-      transform: translateY(-50%) rotate(45deg);
+      -webkit-transform: translateY(-50%) rotate(45deg);
+          -ms-transform: translateY(-50%) rotate(45deg);
+              transform: translateY(-50%) rotate(45deg);
       top: 50%;
       right: 2rem;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
       transition: all 0.3s;
     }
   }
@@ -222,6 +249,8 @@ br.__sp {
     left: -240px;
     background: $White;
     position: absolute;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
     transition: all .5s ease;
     z-index: 1;
     @include mq(tab) {
@@ -244,7 +273,9 @@ br.__sp {
       &::before {
         border-top: 3px solid $Blue_Marin;
         border-right: 3px solid $Blue_Marin;
-        transform: translateY(-50%) translateX(10px) rotate(45deg);
+        -webkit-transform: translateY(-50%) translateX(10px) rotate(45deg);
+            -ms-transform: translateY(-50%) translateX(10px) rotate(45deg);
+                transform: translateY(-50%) translateX(10px) rotate(45deg);
       }
     }
   }
@@ -258,14 +289,24 @@ header {
   top: 0;
   left: 0;
   padding: 2% 1%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-right: 2px solid $White;
   .header-wrap {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: auto;
     vertical-align: middle;
     .drawer {
@@ -276,10 +317,13 @@ header {
       aspect-ratio: 5 / 1;
       margin: 0 auto 50%;
       a {
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
         img {
           width: 100%;
-          object-fit: cover;
+          -o-object-fit: cover;
+             object-fit: cover;
         }
         &:hover {
           cursor: pointer;
@@ -294,9 +338,16 @@ header {
       width: 90%;
       height: 100%;
       &__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         &__item {
           display: inline-block;
           margin-bottom: 40%;
@@ -306,6 +357,8 @@ header {
             color: $White;
             display: inline-block;
             padding-bottom: 3px;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
             &:hover {
               cursor: pointer;
@@ -315,6 +368,8 @@ header {
             content: "";
             display: block;
             width: 0;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
             border-bottom: 3px solid $White;
           }
@@ -331,7 +386,8 @@ header {
 header.headerScroll {
   background: $White;
   border-right: 2px solid $Gray_Bg;
-  box-shadow: 4px 2px 10px 0px $Gray_Bg;
+  -webkit-box-shadow: 4px 2px 10px 0px $Gray_Bg;
+          box-shadow: 4px 2px 10px 0px $Gray_Bg;
   .header-wrap__logo {
     .logo_g {
       display: block;
@@ -356,8 +412,18 @@ header.headerScroll {
 
 // フェード
 .fadeIn {
-  animation: fadeInAnime 0.8s forwards;
+  -webkit-animation: fadeInAnime 0.8s forwards;
+          animation: fadeInAnime 0.8s forwards;
   opacity: 0;
+}
+
+@-webkit-keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInAnime {
@@ -370,52 +436,100 @@ header.headerScroll {
 }
 
 .fadeUp {
-  animation: fadeUpAnime 0.8s forwards;
+  -webkit-animation: fadeUpAnime 0.8s forwards;
+          animation: fadeUpAnime 0.8s forwards;
   opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @keyframes fadeUpAnime {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 .fadeLeft {
-  animation: fadeLeftAnime 0.5s forwards;
+  -webkit-animation: fadeLeftAnime 0.5s forwards;
+          animation: fadeLeftAnime 0.5s forwards;
   opacity: 1;
   overflow: hidden;
+}
+
+@-webkit-keyframes fadeLeftAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @keyframes fadeLeftAnime {
   from {
     opacity: 1;
-    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 .fadeRight {
-  animation: fadeRightAnime 0.5s forwards;
+  -webkit-animation: fadeRightAnime 0.5s forwards;
+          animation: fadeRightAnime 0.5s forwards;
   opacity: 1;
   overflow: hidden;
+}
+
+@-webkit-keyframes fadeRightAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 @keyframes fadeRightAnime {
   from {
     opacity: 1;
-    transform: translateX(50px);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -431,27 +545,45 @@ header.headerScroll {
 .footer {
   background-color: $Black;
   &-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     &__top {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       &__logo {
         width: 150px;
         min-width: 100px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
         overflow: hidden;
         &:hover {
           cursor: pointer;
           opacity: 0.7;
-          transform: scale(1.05);
+          -webkit-transform: scale(1.05);
+              -ms-transform: scale(1.05);
+                  transform: scale(1.05);
         }
         img {
           width: 100%;
           height: 100%;
-          object-fit: contain;
+          -o-object-fit: contain;
+             object-fit: contain;
         }
       }
       &__txt {
@@ -469,7 +601,9 @@ header.headerScroll {
           width: 50px;
           border-top: 1px solid $White;
           top: 50%;
-          transform: translateY(-50%) rotate(-65deg);
+          -webkit-transform: translateY(-50%) rotate(-65deg);
+              -ms-transform: translateY(-50%) rotate(-65deg);
+                  transform: translateY(-50%) rotate(-65deg);
           left: -10%;
         }
       }
@@ -483,6 +617,8 @@ header.headerScroll {
         border: 2px solid $White;
         padding: 1rem 4rem;
         font-weight: bold;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
         &:hover {
           color: $White;
@@ -494,18 +630,26 @@ header.headerScroll {
       display: block;
       width: 80%;
       &__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         &__item {
           margin: 0 4%;
           a {
             color: $White;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
             transition: all 0.3s;
             &::after {
               content: "";
               display: block;
               width: 0;
               border-bottom: 3px solid $White;
+              -webkit-transition: all 0.3s;
+              -o-transition: all 0.3s;
               transition: all 0.3s;
             }
             &:hover::after {
@@ -518,8 +662,12 @@ header.headerScroll {
     }
     &__bottom {
       min-width: 55%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       margin-top: 5%;
       &__sns {
         width: 40%;
@@ -529,11 +677,15 @@ header.headerScroll {
         i {
           font-size: 1.5rem;
           margin: 0 8%;
+          -webkit-transition: all 0.3s;
+          -o-transition: all 0.3s;
           transition: all 0.3s;
           &:hover {
             cursor: pointer;
             opacity: 0.7;
-            transform: scale(1.25);
+            -webkit-transform: scale(1.25);
+                -ms-transform: scale(1.25);
+                    transform: scale(1.25);
           }
         }
       }
@@ -562,7 +714,8 @@ header.headerScroll {
     height: 70px;
     padding: 2% 4%;
     .headerScroll {
-      box-shadow: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
     }
     .header-wrap {
       max-width: 100%;
@@ -590,6 +743,8 @@ header.headerScroll {
         position: absolute;
         top: 0;
         right: 0;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
       }
       &::before {
@@ -614,8 +769,13 @@ header.headerScroll {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        flex-direction: column;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         &__item {
           margin: 5% auto;
           font-size: 1.8rem;
@@ -641,12 +801,16 @@ header.headerScroll {
         z-index: 999;
         &::before {
           top: 15px;
-          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+                  transform: rotate(-45deg);
           background: $White;
         }
         &::after {
           top: 15px;
-          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
           background: $White;
         }
       }
@@ -674,10 +838,17 @@ header.headerScroll {
     padding: 6% 0;
     &-wrap {
       &__body {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         hr {
-          transform: rotate(0);
+          -webkit-transform: rotate(0);
+              -ms-transform: rotate(0);
+                  transform: rotate(0);
           margin: 6% auto;
         }
         &__left {
@@ -686,7 +857,10 @@ header.headerScroll {
         &__right {
           width: 100%;
           &__bottom {
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             &__left {
               width: 140px;
               margin: 5% auto;
@@ -706,7 +880,10 @@ header.headerScroll {
     padding: 8% 2%;
     &-wrap {
       &__top {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         &__logo {
           width: 120px;
           margin: 0 auto 5%;
@@ -717,7 +894,9 @@ header.headerScroll {
           &::after {
             top: 0;
             left: 50%;
-            transform: translateX(-50%) rotate(0);
+            -webkit-transform: translateX(-50%) rotate(0);
+                -ms-transform: translateX(-50%) rotate(0);
+                    transform: translateX(-50%) rotate(0);
           }
         }
       }
@@ -725,7 +904,10 @@ header.headerScroll {
         margin: 8% auto;
       }
       &__bottom {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         &__sns {
           width: 80%;
           margin: 0 auto 5%;

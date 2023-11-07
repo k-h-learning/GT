@@ -18,7 +18,11 @@
   margin: 5% auto;
 }
 .contact-wrap__form__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   margin: 0 auto 7.5%;
@@ -48,6 +52,7 @@
   width: 70%;
   padding-left: 5px;
   font-size: 1rem;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .contact-wrap__form__box__area {
@@ -61,10 +66,13 @@
   border: 2px solid #001F31;
   background-color: #001F31;
   position: relative;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow: hidden;
   color: #fff;
   font-weight: bolder;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   z-index: 2;
   position: relative;
@@ -76,6 +84,8 @@
   top: 0;
   background: #fff;
   position: absolute;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   z-index: -1;
 }
@@ -97,6 +107,9 @@
     width: 80%;
   }
   .contact-wrap__form__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .contact-wrap__form__box__ttl {
