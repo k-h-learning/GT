@@ -1,0 +1,131 @@
+.contact-wrap {
+  width: 80%;
+}
+.contact-wrap__intro {
+  width: 90%;
+  margin: 0 auto;
+}
+.contact-wrap__intro p {
+  text-align: center;
+}
+.contact-wrap__intro p span {
+  display: inline-block;
+  color: #FF0000;
+  font-size: 0.8rem;
+  margin-top: 1.5%;
+}
+.contact-wrap__form {
+  margin: 5% auto;
+}
+.contact-wrap__form__box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 7.5%;
+}
+.contact-wrap__form__box__ttl {
+  font-weight: bolder;
+  margin-bottom: 2%;
+  width: 20%;
+  min-width: 190px;
+  padding-right: 2rem;
+  position: relative;
+  margin-right: 5%;
+  white-space: nowrap;
+}
+.contact-wrap__form__box__ttl span {
+  color: #FF0000;
+  display: inline-block;
+  position: absolute;
+  top: 3.5%;
+  right: 0;
+  font-size: 0.5rem;
+  border: 0.8px solid #FF0000;
+  padding: 0.25rem 0.5rem;
+}
+.contact-wrap__form__box__select, .contact-wrap__form__box__input, .contact-wrap__form__box__area {
+  height: 3rem;
+  width: 70%;
+  padding-left: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.contact-wrap__form__box__area {
+  height: 12rem;
+}
+.contact-wrap__form .contact-btn {
+  width: 150px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #001F31;
+  background-color: #001F31;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #fff;
+  font-weight: bolder;
+  transition: all 0.5s ease;
+  z-index: 2;
+  position: relative;
+}
+.contact-wrap__form .contact-btn .btn_bg {
+  width: 150px;
+  height: 50px;
+  left: -150px;
+  top: 0;
+  background: #fff;
+  position: absolute;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.contact-wrap__form .contact-btn:hover {
+  color: #001F31;
+  cursor: pointer;
+}
+.contact-wrap__form .contact-btn:hover .btn_bg {
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-wrap {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-wrap {
+    width: 80%;
+  }
+  .contact-wrap__form__box {
+    flex-direction: column;
+  }
+  .contact-wrap__form__box__ttl {
+    width: 25%;
+    min-width: 150px;
+    margin-bottom: 3%;
+  }
+  .contact-wrap__form__box__select, .contact-wrap__form__box__input, .contact-wrap__form__box__area {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contact-wrap {
+    width: 90%;
+  }
+  .contact-wrap__intro {
+    width: 100%;
+  }
+  .contact-wrap__form {
+    width: 100%;
+  }
+  .contact-wrap__form__box__ttl {
+    width: 40%;
+    min-width: 120px;
+  }
+  .contact-wrap__form__box__select, .contact-wrap__form__box__input, .contact-wrap__form__box__area {
+    height: 4rem;
+  }
+  .contact-wrap__form__box__area {
+    height: 15rem;
+  }
+}

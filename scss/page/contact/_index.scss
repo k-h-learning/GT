@@ -1,0 +1,153 @@
+@use "../../global" as *;
+
+.contact {
+  &-wrap {
+    width: 80%;
+    &__intro {
+      width: 90%;
+      margin: 0 auto;
+      p {
+        text-align: center;
+        span {
+          display: inline-block;
+          color: $Red;
+          font-size: 0.8rem;
+          margin-top: 1.5%;
+        }
+      }
+    }
+    &__form {
+      margin: 5% auto;
+      &__box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto 7.5%;
+        &__ttl {
+          font-weight: bolder;
+          margin-bottom: 2%;
+          width: 20%;
+          min-width: 190px;
+          padding-right: 2rem;
+          position: relative;
+          margin-right: 5%;
+          white-space: nowrap;
+          span {
+            color: $Red;
+            display: inline-block;
+            position: absolute;
+            top: 3.5%;
+            right: 0;
+            font-size: 0.5rem;
+            border: 0.8px solid $Red;
+            padding: 0.25rem 0.5rem;
+          }
+        }
+        &__select,
+        &__input,
+        &__area {
+          height: 3rem;
+          width: 70%;
+          padding-left: 5px;
+          font-size: 1rem;
+          box-sizing: border-box;
+        }
+        &__area {
+          height: 12rem;
+        }
+      }
+      .contact-btn {
+        width: 150px;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+        border: 2px solid $Black;
+        background-color: $Black;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;
+        color: $White;
+        font-weight: bolder;
+        transition: all .5s ease;
+        z-index: 2;
+        position: relative;
+        .btn_bg {
+          width: 150px;
+          height: 50px;
+          left: -150px;
+          top: 0;
+          background: $White;
+          position: absolute;
+          transition: all .5s ease;
+          z-index: -1;
+        }
+        &:hover {
+          color: $Black;
+          cursor: pointer;
+          .btn_bg {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(pc) {
+  .contact {
+    &-wrap {
+      width: 90%;
+    }
+  }
+}
+
+@include mq(tab) {
+  .contact {
+    &-wrap {
+      width: 80%;
+      &__form {
+        &__box {
+          flex-direction: column;
+          &__ttl {
+            width: 25%;
+            min-width: 150px;
+            margin-bottom: 3%;
+          }
+          &__select,
+          &__input,
+          &__area {
+            width: 100%;
+          }
+        } 
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .contact {
+    &-wrap {
+      width: 90%;
+      &__intro {
+        width: 100%;
+      }
+      &__form {
+        width: 100%;
+        &__box {
+          &__ttl {
+            width: 40%;
+            min-width: 120px;
+          }
+          &__select,
+          &__input,
+          &__area {
+            height: 4rem;
+          }
+          &__area {
+            height: 15rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.article-wrap {
+  width: 60%;
+}
+.article-wrap__topimg {
+  width: 100%;
+  margin: 2% auto 5%;
+}
+.article-wrap__topimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article-wrap__txt {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .article-wrap {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .article-wrap {
+    width: 90%;
+  }
+  .article-wrap__ttl {
+    width: fit-content;
+    margin: 0 auto 10%;
+  }
+  .article-wrap__topimg {
+    margin-bottom: 10%;
+  }
+}

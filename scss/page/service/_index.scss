@@ -1,0 +1,347 @@
+@use "../../global" as *;
+
+.intro {
+  padding: 4% 0;
+  &-wrap {
+    width: 60%;
+    p {
+      line-height: 2;
+      text-align: center;
+      color: $Blue_Dark;
+    }
+  }
+}
+
+.service {
+  &-wrap {
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      padding: 2% 0;
+      margin-bottom: 4%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:nth-of-type(2n) {
+        flex-direction: row-reverse;
+      }
+      &__left {
+        width: 55%;
+        margin: 0 2%;
+        &__ttl {
+          margin-bottom: 2rem;
+          position: relative;
+          span {
+            color: $Blue_Marin;
+            font-size: 0.8rem;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 3px;
+            background-color: $Blue_Marin;
+            border-radius: 10%;
+            bottom: -1rem;
+            left: 0;
+          }
+        }
+      }
+      &__img {
+        width: 40%;
+        aspect-ratio: 5 / 3;
+        margin: 0 2%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+.flow {
+  &-wrap {
+    &__ttl {
+      width: fit-content;
+      margin:0 auto 4%;
+      span {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        width: fit-content;
+        margin: 0 auto -5%;
+    
+        &::after {
+          left: -2rem;
+        }
+    
+        &::before {
+          position: absolute;
+          content: "";
+          background-color: $Blue_Marin;
+          width: 30px;
+          height: 2px;
+          border-radius: 15%;
+          right: -2rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &__item {
+        width: 20%;
+        margin: 2%;
+        &__num {
+          p {
+            color: $White;
+            font-weight: bold;
+            padding: 0.8rem 2rem;
+            background-color: $Black;
+            text-align: center;
+            clip-path: polygon(0 0, 80% 0, 100% 100%, 20% 100%);
+            white-space: nowrap;
+          }
+        }
+        &__ttl {
+          text-align: center;
+          margin: 1.5rem auto;
+          h4 {
+            font-size: 1.1rem;
+          }
+        }
+        &__txt {
+          width: 102%;
+        }
+      }
+    }
+  }
+}
+
+.link {
+  background: url(../../../img/about_bg.png) center no-repeat;
+  background-size: cover;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $Blue_Dark_rgb60;
+  }
+  &-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__block {
+      width: 40%;
+      min-width: 370px;
+      height: 280px;
+      background-color: $White;
+      z-index: 2;
+      margin: 2%;
+      align-items: center;
+      padding: 4%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__ttl {
+        margin: 0 auto 10%;
+        width: fit-content;
+        text-align: center;
+        span {
+          padding-right: 1rem;
+          padding-left: 1rem;
+          width: fit-content;
+          margin: 0 auto -5%;
+          &::after {
+            left: -2rem;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            background-color: $Blue_Marin;
+            width: 30px;
+            height: 2px;
+            border-radius: 15%;
+            right: -2rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+      .__btn_1 {
+        max-width: 100%;
+        width: fit-content;
+        border: 2px solid $Blue_Dark;
+        background-color: $Blue_Dark;
+        a {
+          padding-left: 2rem;
+          padding-right: 4rem;
+          white-space: nowrap;
+          &:hover {
+            color: $Blue_Dark;
+            background-color: $White;
+            &::before {
+              border-top: 3px solid $Blue_Dark;
+              border-right: 3px solid $Blue_Dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(pc) {
+  .link {
+    &-wrap {
+      &__block {
+        width: 45%;
+        height: 260px;
+      }
+    }
+  }
+
+  
+}
+
+@include mq(tab) {
+  .intro {
+    &-wrap {
+      width: 80%;
+    }
+  }
+
+  .flow {
+    &-wrap {
+      &__ttl {
+        h2 {
+          span {
+            &::before {
+              width: 20px;
+              right: -1rem;
+            }
+            &::after {
+              left: -1rem;
+            }
+          }
+        }
+      }
+      &__list {
+        justify-content: center;
+        &__item {
+          width: 30%;
+          margin: 4%;
+          &__num {
+            p {
+              padding: 0.5rem 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .link {
+    &-wrap {
+      &__block {
+        height: 200px;
+        &__ttl {
+          h2 {
+            span {
+              &::before {
+                width: 20px;
+                right: -1rem;
+              }
+              &::after {
+                left: -1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .service {
+    &-wrap {
+      &__block {
+        width: 100%;
+        flex-direction: column-reverse;
+        margin: 5% auto;
+        &:nth-of-type(2n) {
+          flex-direction: column-reverse;
+        }
+        &__left {
+          width: 100%;
+          &__ttl {
+            h3 {
+              font-size: 1.5rem;
+              span {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        &__img {
+          width: 100%;
+          height: 220px;
+          margin-bottom: 3%;
+        }
+      }
+    }
+  }
+
+  .flow {
+    &-wrap {
+      &__ttl {
+        .ttl_2 {
+          span {
+            &::before {
+              width: 18px;
+            }
+          }
+        }
+      }
+      &__list {
+        &__item {
+          width: 60%;
+          margin: 6% auto;
+          
+        }
+      }
+    }
+  }
+
+  .link {
+    &-wrap {
+      flex-direction: column;
+      &__block {
+        width: 80%;
+        min-width: 320px;
+        &:first-child {
+          margin-bottom: 8%;
+        }
+        &__ttl {
+          h2 {
+            span {
+              &::before {
+                width: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
