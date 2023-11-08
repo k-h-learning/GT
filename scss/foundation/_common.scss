@@ -323,7 +323,7 @@ header {
         img {
           width: 100%;
           -o-object-fit: cover;
-             object-fit: cover;
+            object-fit: cover;
         }
         &:hover {
           cursor: pointer;
@@ -338,6 +338,8 @@ header {
       width: 90%;
       height: 100%;
       &__list {
+        width: fit-content;
+        margin: 0 auto;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -386,8 +388,6 @@ header {
 header.headerScroll {
   background: $White;
   border-right: 2px solid $Gray_Bg;
-  -webkit-box-shadow: 4px 2px 10px 0px $Gray_Bg;
-          box-shadow: 4px 2px 10px 0px $Gray_Bg;
   .header-wrap__logo {
     .logo_g {
       display: block;

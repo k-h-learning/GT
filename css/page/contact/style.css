@@ -17,6 +17,9 @@
 .contact-wrap__form {
   margin: 5% auto;
 }
+.contact-wrap__form ._area {
+  align-items: baseline;
+}
 .contact-wrap__form__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,6 +29,7 @@
   justify-content: center;
   width: 100%;
   margin: 0 auto 7.5%;
+  align-items: center;
 }
 .contact-wrap__form__box__ttl {
   font-weight: bolder;
@@ -34,8 +38,9 @@
   min-width: 190px;
   padding-right: 2rem;
   position: relative;
-  margin-right: 5%;
+  margin: 0 5% 0 0;
   white-space: nowrap;
+  line-height: 1;
 }
 .contact-wrap__form__box__ttl span {
   color: #FF0000;
@@ -59,8 +64,8 @@
   height: 12rem;
 }
 .contact-wrap__form .contact-btn {
-  width: 150px;
-  height: 50px;
+  width: 180px;
+  height: 60px;
   display: block;
   margin: 0 auto;
   border: 2px solid #001F31;
@@ -78,9 +83,9 @@
   position: relative;
 }
 .contact-wrap__form .contact-btn .btn_bg {
-  width: 150px;
-  height: 50px;
-  left: -150px;
+  width: 180px;
+  height: 60px;
+  left: -180px;
   top: 0;
   background: #fff;
   position: absolute;
@@ -111,6 +116,7 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    align-items: baseline;
   }
   .contact-wrap__form__box__ttl {
     width: 25%;
@@ -140,5 +146,14 @@
   }
   .contact-wrap__form__box__area {
     height: 15rem;
+  }
+  .contact-wrap__form .contact-btn {
+    width: 120px;
+    height: 50px;
+  }
+  .contact-wrap__form .btn_bg {
+    width: 120px;
+    height: 50px;
+    left: -120px;
   }
 }

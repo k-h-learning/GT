@@ -37,9 +37,12 @@
   margin-bottom: 2rem;
   position: relative;
 }
+.service-wrap__block__left__ttl .ttl_3 {
+  font-size: 1.8rem;
+}
 .service-wrap__block__left__ttl span {
   color: #2B80B0;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .service-wrap__block__left__ttl::after {
   position: absolute;

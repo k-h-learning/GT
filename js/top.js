@@ -8,7 +8,7 @@ $(window).on('load', function () {
 $(function () {
   $(window).on("scroll", function () {
     const sliderHeight = $(".top").height();
-    if (sliderHeight - 30 < $(this).scrollTop()) {
+    if (sliderHeight - 120 < $(this).scrollTop()) {
       $(".js-header").addClass("headerScroll");
     } else {
       $(".js-header").removeClass("headerScroll");
