@@ -51,7 +51,7 @@
   background-color: #2D4D5F;
   width: 30px;
   height: 30px;
-  margin: 4% 2% auto 2%;
+  margin: 2%;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -79,8 +79,8 @@
 @media screen and (max-width: 768px) {
   header.headerScroll {
     background: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    box-sizing: border-box;
+    border-right: none;
   }
   header.headerScroll .drawer {
     border-top: solid 5px #fff;
@@ -95,9 +95,9 @@
     display: none;
   }
   header.headerScrollTab {
+    box-sizing: border-box;
     background: #fff;
-    -webkit-box-shadow: 4px 4px 4px 0 #D9D9D9;
-    box-shadow: 4px 4px 4px 0 #D9D9D9;
+    border-right: none;
   }
   header.headerScrollTab .drawer {
     border-top: solid 5px #2D4D5F;

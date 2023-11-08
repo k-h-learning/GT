@@ -17,6 +17,7 @@ body {
   word-break: break-all;
   color: $Black;
   margin: 0 auto;
+  position: relative;
 }
 
 a {
@@ -32,6 +33,7 @@ li {
   padding: 6% 0;
   width: 90%;
   margin: 0 0 0 auto ;
+  overflow: hidden;
   @include mq(pc) {
     width: 85%;
   }
@@ -292,6 +294,7 @@ header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-right: 2px solid $White;
+  max-width: 100vw;
   .header-wrap {
     height: 100%;
     display: -webkit-box;
@@ -583,29 +586,32 @@ header.headerScroll {
           width: 100%;
           height: 100%;
           -o-object-fit: contain;
-             object-fit: contain;
+            object-fit: contain;
         }
       }
-      &__txt {
-        min-width: 50%;
-        max-width: 65%;
+      &__line {
         position: relative;
-        margin-left: 10%;
-        p {
-          color: $White;
-          font-size: 0.8rem;
-        }
+        width: 20px;
+        margin: 0 5%;
         &::after {
           position: absolute;
           content: "";
           width: 50px;
           border-top: 1px solid $White;
           top: 50%;
-          -webkit-transform: translateY(-50%) rotate(-65deg);
-              -ms-transform: translateY(-50%) rotate(-65deg);
-                  transform: translateY(-50%) rotate(-65deg);
-          left: -10%;
+          transform: translate(-50%, -50%) rotate(-65deg);
+          left: 50%;
         }
+      }
+      &__txt {
+        min-width: 50%;
+        max-width: 65%;
+        position: relative;
+        p {
+          color: $White;
+          font-size: 0.8rem;
+        }
+        
       }
     }
     &__con {
@@ -713,10 +719,8 @@ header.headerScroll {
     width: 100%;
     height: 70px;
     padding: 2% 4%;
-    .headerScroll {
-      -webkit-box-shadow: none;
-              box-shadow: none;
-    }
+    border-right: none;
+    box-sizing: border-box;
     .header-wrap {
       max-width: 100%;
       &__logo {
@@ -817,6 +821,8 @@ header.headerScroll {
     }
 
     header.headerScroll {
+      border-right: none;
+      box-sizing: border-box;
       .header-wrap__nav__list__item {
         a {
           color: $White;
@@ -825,6 +831,7 @@ header.headerScroll {
     }
   }
   header.headerScroll {
+    border-right: none;
     .drawer {
       border-top: solid 5px $Blue_Dark;
       &::before,
@@ -837,7 +844,7 @@ header.headerScroll {
   .footer {
     padding: 6% 0;
     &-wrap {
-      &__body {
+      &__top {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -845,29 +852,11 @@ header.headerScroll {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        hr {
-          -webkit-transform: rotate(0);
-              -ms-transform: rotate(0);
-                  transform: rotate(0);
-          margin: 6% auto;
-        }
-        &__left {
-          width: 100%;
-        }
-        &__right {
-          width: 100%;
-          &__bottom {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
-            &__left {
-              width: 140px;
-              margin: 5% auto;
-            }
-            &__right {
-              text-align: center;
-            }
+        &__line {
+          margin: 5% auto;
+          &::after {
+            width: 80px;
+            transform: translate(-50%, -50%) rotate(0deg);
           }
         }
       }
@@ -876,6 +865,10 @@ header.headerScroll {
 }
 
 @include mq(sp) {
+  // header {
+  //   transform: translateY(0);
+  // }
+
   .footer {
     padding: 8% 2%;
     &-wrap {
@@ -902,6 +895,9 @@ header.headerScroll {
       }
       &__con {
         margin: 8% auto;
+      }
+      &__nav {
+        min-width: 250px;
       }
       &__bottom {
         -webkit-box-orient: vertical;

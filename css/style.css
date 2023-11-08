@@ -185,6 +185,7 @@ body {
   word-break: break-all;
   color: #001F31;
   margin: 0 auto;
+  position: relative;
 }
 
 a {
@@ -200,6 +201,7 @@ li {
   padding: 6% 0;
   width: 90%;
   margin: 0 0 0 auto;
+  overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
   .section {
@@ -492,6 +494,7 @@ header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-right: 2px solid #fff;
+  max-width: 100vw;
 }
 header .header-wrap {
   height: 100%;
@@ -773,26 +776,28 @@ header.headerScroll .header-wrap__nav__list__item a:hover::after {
   -o-object-fit: contain;
   object-fit: contain;
 }
-.footer-wrap__top__txt {
-  min-width: 50%;
-  max-width: 65%;
+.footer-wrap__top__line {
   position: relative;
-  margin-left: 10%;
+  width: 20px;
+  margin: 0 5%;
 }
-.footer-wrap__top__txt p {
-  color: #fff;
-  font-size: 0.8rem;
-}
-.footer-wrap__top__txt::after {
+.footer-wrap__top__line::after {
   position: absolute;
   content: "";
   width: 50px;
   border-top: 1px solid #fff;
   top: 50%;
-  -webkit-transform: translateY(-50%) rotate(-65deg);
-  -ms-transform: translateY(-50%) rotate(-65deg);
-  transform: translateY(-50%) rotate(-65deg);
-  left: -10%;
+  transform: translate(-50%, -50%) rotate(-65deg);
+  left: 50%;
+}
+.footer-wrap__top__txt {
+  min-width: 50%;
+  max-width: 65%;
+  position: relative;
+}
+.footer-wrap__top__txt p {
+  color: #fff;
+  font-size: 0.8rem;
 }
 .footer-wrap__con {
   margin: 5% auto;
@@ -895,10 +900,8 @@ header.headerScroll .header-wrap__nav__list__item a:hover::after {
     width: 100%;
     height: 70px;
     padding: 2% 4%;
-  }
-  header .headerScroll {
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    border-right: none;
+    box-sizing: border-box;
   }
   header .header-wrap {
     max-width: 100%;
@@ -993,8 +996,15 @@ header.headerScroll .header-wrap__nav__list__item a:hover::after {
     transform: rotate(45deg);
     background: #fff;
   }
+  body.nav-open header.headerScroll {
+    border-right: none;
+    box-sizing: border-box;
+  }
   body.nav-open header.headerScroll .header-wrap__nav__list__item a {
     color: #fff;
+  }
+  header.headerScroll {
+    border-right: none;
   }
   header.headerScroll .drawer {
     border-top: solid 5px #2D4D5F;
@@ -1005,7 +1015,7 @@ header.headerScroll .header-wrap__nav__list__item a:hover::after {
   .footer {
     padding: 6% 0;
   }
-  .footer-wrap__body {
+  .footer-wrap__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1014,30 +1024,12 @@ header.headerScroll .header-wrap__nav__list__item a:hover::after {
     -ms-flex-align: center;
     align-items: center;
   }
-  .footer-wrap__body hr {
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    transform: rotate(0);
-    margin: 6% auto;
-  }
-  .footer-wrap__body__left {
-    width: 100%;
-  }
-  .footer-wrap__body__right {
-    width: 100%;
-  }
-  .footer-wrap__body__right__bottom {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .footer-wrap__body__right__bottom__left {
-    width: 140px;
+  .footer-wrap__top__line {
     margin: 5% auto;
   }
-  .footer-wrap__body__right__bottom__right {
-    text-align: center;
+  .footer-wrap__top__line::after {
+    width: 80px;
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 }
 @media screen and (max-width: 480px) {
@@ -1067,6 +1059,9 @@ header.headerScroll .header-wrap__nav__list__item a:hover::after {
   }
   .footer-wrap__con {
     margin: 8% auto;
+  }
+  .footer-wrap__nav {
+    min-width: 250px;
   }
   .footer-wrap__bottom {
     -webkit-box-orient: vertical;

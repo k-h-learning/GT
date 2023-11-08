@@ -316,7 +316,7 @@
   }
   .link-wrap__block {
     width: 80%;
-    min-width: 320px;
+    min-width: 250px;
   }
   .link-wrap__block:first-child {
     margin-bottom: 8%;

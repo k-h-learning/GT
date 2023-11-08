@@ -1,7 +1,7 @@
 @use "../../global" as *;
 
 .top {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
   position: relative;
@@ -389,6 +389,7 @@
       width: 65%;
       &__list {
         &__item {
+          transition: all 0.3s;
           &__txt {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -411,12 +412,17 @@
               -o-transition: all 0.3s;
               transition: all 0.3s;
               white-space: nowrap;
+              max-height: 1.5rem;
               &:hover {
                 cursor: pointer;
                 background-color: $Blue_Marin;
                 color: $White;
               }
             }
+          }
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
           }
         }
         hr {

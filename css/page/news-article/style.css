@@ -1,6 +1,12 @@
 .article-wrap {
   width: 60%;
 }
+.article-wrap__ttl h2 {
+  line-height: 1.5;
+}
+.article-wrap__ttl h2 span {
+  margin-bottom: -2rem;
+}
 .article-wrap__topimg {
   width: 100%;
   margin: 2% auto 5%;
