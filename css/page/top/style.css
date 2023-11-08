@@ -253,6 +253,7 @@
 .about-wrap__block {
   width: 40%;
   padding: 4% 2%;
+  margin: 2%;
   position: relative;
   z-index: 1;
   display: -webkit-box;
@@ -422,6 +423,9 @@
   .service-wrap__body__list__item .ttl_3 span {
     font-size: 0.9rem;
   }
+  .about-wrap__block {
+    min-width: 280px;
+  }
   .about-wrap__block__ttl {
     font-size: 1.6rem;
   }
@@ -498,6 +502,7 @@
   }
   .about-wrap__block {
     width: 80%;
+    min-width: 250px;
     padding: 8% 2% 6%;
   }
   .about-wrap__block:first-child {
@@ -527,7 +532,7 @@
 .load-video {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   top: 0;
   left: 0;

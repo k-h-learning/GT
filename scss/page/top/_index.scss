@@ -188,7 +188,7 @@
               width: 100%;
               height: 100%;
               -o-object-fit: cover;
-                 object-fit: cover;
+                object-fit: cover;
               -webkit-transition: all 0.5s;
               -o-transition: all 0.5s;
               transition: all 0.5s;
@@ -261,6 +261,7 @@
     &__block {
       width: 40%;
       padding: 4% 2%;
+      margin: 2%;
       position: relative;
       z-index: 1;
       display: -webkit-box;
@@ -451,6 +452,7 @@
   .about {
     &-wrap {
       &__block {
+        min-width: 280px;
         &__ttl {
           font-size: 1.6rem;
           span {
@@ -547,6 +549,7 @@
               flex-direction: column;
       &__block {
         width: 80%;
+        min-width: 250px;
         padding: 8% 2% 6%;
         &:first-child {
           margin-bottom: 6%;
@@ -583,7 +586,7 @@
 .load-video {
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   overflow: hidden;
   top: 0;
   left: 0;
