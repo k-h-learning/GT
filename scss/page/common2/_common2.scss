@@ -58,6 +58,8 @@
       a {
         color: $White;
         font-size: 1rem;
+        width: 100%;
+        vertical-align: middle;
         -webkit-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s;
@@ -142,6 +144,9 @@
       &__item {
         width: 20px;
         height: 20px;
+        a {
+          line-height: 20px;
+        }
       }
     }
   }

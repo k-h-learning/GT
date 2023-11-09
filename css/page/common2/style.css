@@ -59,6 +59,8 @@
 .pagination__list__item a {
   color: #fff;
   font-size: 1rem;
+  width: 100%;
+  vertical-align: middle;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -125,5 +127,8 @@
   .pagination__list__item {
     width: 20px;
     height: 20px;
+  }
+  .pagination__list__item a {
+    line-height: 20px;
   }
 }
