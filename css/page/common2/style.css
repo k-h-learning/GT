@@ -112,7 +112,7 @@
     display: block;
   }
   .top {
-    width: 100vw;
+    width: 100%;
   }
   .pagination {
     margin: 8% auto 0;
