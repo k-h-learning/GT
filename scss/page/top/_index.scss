@@ -72,6 +72,7 @@
 
 .intro {
   width: 100%;
+  box-sizing: border-box;
   &-wrap {
     width: 100%;
     background: url(../../../img/ITblue.jpg);
@@ -79,7 +80,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    padding: 6% 0;
+    padding: 6% 2%;
     z-index: -1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -87,6 +88,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    box-sizing: border-box;
     &::after {
       content: "";
       position: absolute;

@@ -202,6 +202,7 @@ li {
   width: 90%;
   margin: 0 0 0 auto;
   overflow: hidden;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 1024px) {
   .section {
@@ -495,6 +496,7 @@ header {
   box-sizing: border-box;
   border-right: 2px solid #fff;
   max-width: 100vw;
+  transition: all 1s;
 }
 header .header-wrap {
   height: 100%;
@@ -1033,8 +1035,12 @@ header.headerScroll .header-wrap__nav__list__item a:hover::after {
   }
 }
 @media screen and (max-width: 480px) {
+  header {
+    top: 0px;
+  }
   .footer {
     padding: 8% 2%;
+    box-sizing: border-box;
   }
   .footer-wrap__top {
     -webkit-box-orient: vertical;

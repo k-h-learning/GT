@@ -36,7 +36,7 @@
 
 .pagination {
   width: 100%;
-  margin: 2% auto;
+  margin: 6% auto 0;
   text-align: center;
   &__list {
     display: -webkit-box;
@@ -124,7 +124,11 @@
   }
 
   .top {
-    width: 100%;
+    width: 100vw;
+  }
+
+  .pagination {
+    margin: 8% auto 0;
   }
 }
 

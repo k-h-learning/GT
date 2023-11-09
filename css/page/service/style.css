@@ -308,6 +308,9 @@
     width: 60%;
     margin: 6% auto;
   }
+  .link {
+    width: 100%;
+  }
   .link-wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
